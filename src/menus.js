@@ -40,25 +40,13 @@ export default menus;
 
 addMenu({
 	route: '#',
-    label: 'Info Organisasi',
+    label: 'Program',
 	subMenus: []
 })
 
-addSubMenu('Info Organisasi', {
-	route: '/aboutus',
-	label: 'Tentang Kami',
-	
-})
-
-addSubMenu('Info Organisasi', {
-	route: '/contacts',
-	label: 'Kontak',
-	
-})
-
-addSubMenu('Info Organisasi', {
-	route: '/bankaccount',
-	label: 'Rekening Donasi',
+addSubMenu('Program', {
+	route: '/activity',
+	label: 'Aktivitas',
 	
 })
 
@@ -112,12 +100,24 @@ addSubMenu('PSAK45', {
 
 addMenu({
 	route: '#',
-    label: 'Program',
+    label: 'Info Organisasi',
 	subMenus: []
 })
 
-addSubMenu('Program', {
-	route: '/activity',
-	label: 'Aktivitas',
+addSubMenu('Info Organisasi', {
+	route: '/aboutus',
+	label: 'Tentang Kami',
+	
+})
+
+addSubMenu('Info Organisasi', {
+	route: '/contacts',
+	label: 'Kontak',
+	
+})
+
+addSubMenu('Info Organisasi', {
+	route: '/bankaccount',
+	label: 'Rekening Donasi',
 	
 })

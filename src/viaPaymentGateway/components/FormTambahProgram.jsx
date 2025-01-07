@@ -92,7 +92,7 @@ const FormTambahProgram = ({
 		        control={control}
 				rules={{ required: "Harap masukkan informasi program" }} 
 		        render={({ field, fieldState }) => (
-				  <RichTextField
+		          <TextAreaField
 		            label="Informasi Program"
 		            placeholder="Masukkan informasi program"
 		            fieldState={fieldState}

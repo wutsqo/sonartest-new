@@ -93,7 +93,7 @@ const ModifiedFormUbahActivity = ({
 		        control={control}
 				rules={{ required: "Harap masukkan deskripsi" }} 
 		        render={({ field, fieldState }) => (
-				  <RichTextField
+		          <TextAreaField
 		            label="Deskripsi"
 		            placeholder="Masukkan deskripsi"
 		            defaultValue={activityData.description}	            fieldState={fieldState}

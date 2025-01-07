@@ -169,10 +169,10 @@ const ModifiedFormTambahPemasukan = ({
 					<SelectionField
 				
 	            label="Metode Pembayaran"
-	            options={[{ id: "Ovo", name: "Ovo" },
-	            { id: "ShopeePay", name: "ShopeePay" },
-	            { id: "Gopay", name: "Gopay" },
-	            { id: "Transfer Bank", name: "Transfer Bank" }]}
+	            options={[{ id: "Gopay", name: "Gopay" },
+	            { id: "Ovo", name: "Ovo" },
+	            { id: "Transfer Bank", name: "Transfer Bank" },
+	            { id: "ShopeePay", name: "ShopeePay" }]}
 	            placeholder="Masukkan metode pembayaran"
 					fieldState={fieldState}
 	            {...field}

@@ -12,4 +12,4 @@ Buat berkas `.env` di *root path* dengan merujuk pada berkas `.env.template`
 - `npm run json:server:production`: Menjalankan server JSON untuk menangani halaman statis dalam mode produksi.
 - `npm run start:production`: Menjalankan pratinjau aplikasi dalam mode produksi.
 - `npm run start:production:clean`: Melakukan *build* aplikasi untuk mode produksi dan menjalankan pratinjau aplikasi dalam mode produksi.
-- `npm run prettier`: Melakukan *formatting* pada kode sumber aplikasi.# sonartest-new
+- `npm run prettier`: Melakukan *formatting* pada kode sumber aplikasi.

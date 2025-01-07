@@ -6,7 +6,7 @@ const BlockImage = ({ content, label }) => {
     <img
       src={content}
       alt={label}
-      className="aspect-[4/3] w-full max-h-96 object-cover rounded-btn overflow-hidden not-prose"
+      className="aspect-[4/3] w-full max-h-96 object-cover rounded-btn overflow-hidden"
     />
   );
 };

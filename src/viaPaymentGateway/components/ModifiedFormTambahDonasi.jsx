@@ -164,7 +164,7 @@ const ModifiedFormTambahDonasi = ({
 		        name="description"
 		        control={control}
 		        render={({ field, fieldState }) => (
-				  <RichTextField
+		          <TextAreaField
 		            label="Pesan"
 		            placeholder="Masukkan pesan"
 		            fieldState={fieldState}

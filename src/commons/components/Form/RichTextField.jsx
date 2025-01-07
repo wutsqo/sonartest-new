@@ -31,7 +31,7 @@ const RichTextField = forwardRef(function RichTextField(props, ref) {
               },
             ],
             ["bold", "italic", "underline", "strike", "clean"],
-            ["link", "image"],
+            ["link", "image", "video"],
             [{ list: "ordered" }, { list: "bullet" }, { align: [] }],
           ],
         },
@@ -39,7 +39,7 @@ const RichTextField = forwardRef(function RichTextField(props, ref) {
     });
     ref.current = quill;
     quill.on("text-change", () => {
-      onChange?.(quill.getSemanticHTML());
+      onChange?.(quill.root.innerHTML);
     });
     return () => {
       ref.current = null;

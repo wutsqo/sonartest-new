@@ -9,7 +9,7 @@ const DetailComponentLayout = ({
   itemsModals,
 }) => {
   return (
-    <div className="card card-body mx-auto w-full bg-white shadow-xl p-4 sm:p-8">
+    <div className="card card-body mx-auto w-full bg-white shadow-xl not-prose p-4 sm:p-8">
       {itemsAttrs?.map(
         (va) =>
           va.label.match("Gambar") && (

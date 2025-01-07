@@ -46,12 +46,11 @@ const ModifiedFormTambahActivity = ({
   
   const kirim = (data) => {
     const cleanData = cleanFormData(data)
-	console.log(JSON.stringify(cleanData.description))
     saveActivity({
       ...cleanData,
     })
     .then(({ data: { data } }) => {
-    //   navigate(`/activity`)
+      navigate(`/activity`)
     })
     .catch((error) => {
       console.error(error);
@@ -93,7 +92,7 @@ const ModifiedFormTambahActivity = ({
 		        control={control}
 				rules={{ required: "Harap masukkan deskripsi" }} 
 		        render={({ field, fieldState }) => (
-				  <RichTextField
+		          <TextAreaField
 		            label="Deskripsi"
 		            placeholder="Masukkan deskripsi"
 		            fieldState={fieldState}

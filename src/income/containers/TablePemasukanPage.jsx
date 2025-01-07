@@ -10,16 +10,36 @@ import { Link, useParams } from "react-router";
 import { HeaderContext } from "@/commons/components"
 import { useNavigate } from "react-router";
 import { useAuth } from '@/commons/auth';
-import PemasukanTabWrapper from '../components/PemasukanTabWrapper'
+import PemasukanTable from "../components/PemasukanTable";
+
+import getFilterPrograms from '../services/getFilterPrograms'
+import getIncomeListElement from '../services/getIncomeListElement'
 const TablePemasukanPage = props => {
 const { checkPermission } = useAuth();
 
 	const [isLoading, setIsLoading] = useState({
-	pemasukanTabWrapper: false,
+	tablePemasukan: false,
 
 	});
 	const { setTitle } = useContext(HeaderContext);
 
+const [filterPrograms, setFilterPrograms] = useState()
+const [incomeListElement, setIncomeListElement] = useState()
+
+useEffect(() => {
+		const fetchData = async () => {
+			try {
+				setIsLoading(prev => ({...prev, tablePemasukan: true}))
+				const { data: filterPrograms } = await getFilterPrograms()
+				const { data: incomeListElement } = await getIncomeListElement()
+				setFilterPrograms(filterPrograms.data)
+				setIncomeListElement(incomeListElement.data)
+			} finally {
+				setIsLoading(prev => ({...prev, tablePemasukan: false}))
+			}
+		}
+		fetchData()	
+  	}, [])
 
 	
 	useEffect(() => {
@@ -45,7 +65,18 @@ return (
 			</>
 		}
 	>
-<PemasukanTabWrapper />
+<Layouts.ListContainerTableLayout
+	title={"Table Pemasukan"}
+	singularName={"Pemasukan"}
+	items={[filterPrograms, incomeListElement]}
+	isLoading={isLoading.tablePemasukan}
+>
+	<PemasukanTable
+		filterPrograms={filterPrograms}
+		incomeListElement={incomeListElement}
+		
+	/>
+</Layouts.ListContainerTableLayout>
 
 	</Layouts.ViewContainerLayout>
   )

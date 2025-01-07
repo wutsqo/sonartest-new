@@ -11,7 +11,6 @@ const Form = (props) => {
         className="bg-white card shadow-xl"
         id={id_name}
         {...props}
-        title={undefined}
       >
         <div className="card-body">
           <fieldset className="columns-1 space-y-4">{children}</fieldset>

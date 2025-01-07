@@ -37,7 +37,6 @@
     "globals": "^15.11.0",
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",
-    "sonarqube-scanner": "^4.2.6",
     "tailwindcss": "^3.4.14",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.18.1",
@@ -52,8 +51,7 @@
     "build": "vite build",
     "json:server": "json-server --watch src/staticPage/data/static-page-db.json --port 3003",
     "json:server:production": "json-server --watch src/staticPage/data/static-page-db-production.json --port 3003",
-    "prettier": "prettier --write src/**/*.{js,jsx,json,css,ts,tsx}",
-    "sonar": "sonar-scanner"
+    "prettier": "prettier --write src/**/*.{js,jsx,json,css,ts,tsx}"
   },
   "type": "module",
   "packageManager": "npm@11.0.0"

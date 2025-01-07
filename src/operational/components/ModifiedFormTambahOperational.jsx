@@ -92,7 +92,7 @@ const ModifiedFormTambahOperational = ({
 		        control={control}
 				rules={{ required: "Harap masukkan deskripsi" }} 
 		        render={({ field, fieldState }) => (
-				  <RichTextField
+		          <TextAreaField
 		            label="Deskripsi"
 		            placeholder="Masukkan deskripsi"
 		            fieldState={fieldState}
