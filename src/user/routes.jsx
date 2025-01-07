@@ -1,0 +1,52 @@
+/*
+	Generated on 22/10/2024 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.5.10
+*/
+import RequireAuth from "@/commons/auth/RequireAuth";
+import React from 'react';
+import DaftarUserPage from './containers/DaftarUserPage'
+import TambahUserPage from './containers/TambahUserPage'
+import DetailUserPage from './containers/DetailUserPage'
+import UbahUserPage from './containers/UbahUserPage'
+import UbahRoleUserPage from './containers/UbahRoleUserPage'
+
+const userRoutes = [
+{ 
+	path: "/settings/user/tambah",
+	element: <RequireAuth permissionNeeded="administrator" ><TambahUserPage/></RequireAuth>
+}
+
+	
+,
+{ 
+	path: "/settings/user/ubah",
+	element: <RequireAuth permissionNeeded="administrator" ><UbahUserPage/></RequireAuth>
+}
+
+	
+,
+{ 
+	path: "/settings/user/change-role",
+	element: <RequireAuth permissionNeeded="administrator" ><UbahRoleUserPage/></RequireAuth>
+}
+
+	
+,
+{ 
+	path: "/settings/user/:id",
+	element: <RequireAuth permissionNeeded="administrator" ><DetailUserPage/></RequireAuth>
+}
+
+	
+,
+{ 
+	path: "/settings/user",
+	element: <RequireAuth permissionNeeded="administrator" ><DaftarUserPage/></RequireAuth>
+}
+
+	
+
+]
+
+export default userRoutes
