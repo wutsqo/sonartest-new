@@ -1,5 +1,6 @@
 Kode sumber aplikasi React ini dihasilkan oleh [IFML UI Generator](https://gitlab.com/RSE-Lab-Fasilkom-UI/PricesIDE/ifml-ui-generator) menggunakan [template Standard](https://gitlab.com/RSE-Lab-Fasilkom-UI/PricesIDE/ifml-ui-generator/-/tree/staging/ifml.ui.generator/app_example/template_standard).
 
+
 ## Memulai
 
 Buat berkas `.env` di *root path* dengan merujuk pada berkas `.env.template` 
